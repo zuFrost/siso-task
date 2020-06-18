@@ -1,0 +1,13 @@
+---
+- name: Download file from url
+  hosts: all
+  become: yes
+
+  vars:
+    url: https://www.redhat.com/cms/managed-files/ma-ansible-automation-platform-datasheet-f20327pr-201911-en.pdf
+    destination: /home/ec2-user
+  
+  tasks:
+  
+  - name: Download file from url
+    get_url: url={{ url }} dest={{ destination }}

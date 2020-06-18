@@ -1,0 +1,10 @@
+---
+- name: Show /etc directory
+  hosts: all
+  become: yes
+  
+  tasks:
+  
+  - name: Show /etc directory
+    shell: name="ls /etc"
+    

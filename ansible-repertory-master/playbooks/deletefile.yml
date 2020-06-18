@@ -1,0 +1,13 @@
+---
+- name: Delete file
+  hosts: all
+  become: yes
+
+  vars:
+     filename: /home/ec2-user/ma-ansible-automation-platform-datasheet-f20327pr-201911-en.pdf
+
+  tasks:
+
+  - name: delete file
+    file: path={{ filename }} state=absent
+

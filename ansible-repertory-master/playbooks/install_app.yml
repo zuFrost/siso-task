@@ -1,0 +1,12 @@
+---
+- name: Install application
+  hosts: all
+  become: yes
+
+  vars:
+    app_name: httpd
+  
+  tasks:
+  
+  - name: Install application. Start. And make autostart after reboot
+    yum: name={{ app_name }} state=installed 
