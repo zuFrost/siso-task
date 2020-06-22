@@ -2,7 +2,9 @@
 #Install Python 3.6.10 als altinstall
 #OS tested: Amazon, RHLT8
 - name: Install Python 3.6.10
-  hosts: all
+  hosts:
+    - STAGING_SERVERS
+    - PROD_SERVERS
   become: yes
 
   vars:

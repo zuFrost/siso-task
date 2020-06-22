@@ -1,0 +1,5 @@
+---
+- hosts: siso_dbserver_rhel
+  roles:
+    - role: geerlingguy.postgresql
+      become: yes

@@ -1,11 +1,14 @@
 [STAGING_SERVERS]
-siso_staging_amazon ansible_host=35.158.117.66
-siso_staging_rhlt ansible_host=3.120.27.63
+siso_staging_amazon ansible_host=35.158.101.40
+siso_staging_rhel ansible_host=3.122.248.237
 
 
 [PROD_SERVERS]
-siso_product_amazon ansible_host=18.156.36.26
-siso_product_rhlt ansible_host=18.194.249.154
+siso_product_amazon ansible_host=3.127.22.236
+siso_product_rhel ansible_host=3.124.214.198
+
+[DB_SERVERS]
+siso_dbserver_rhel ansible_host=52.59.198.207
 
 
 [ALL_SERVERS:children]
