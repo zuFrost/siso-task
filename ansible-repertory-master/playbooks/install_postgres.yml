@@ -1,0 +1,33 @@
+---
+- name: Install PostgreSQL
+  hosts: all
+  become: yes
+
+  vars:
+      source_file:
+
+  tasks:
+  - name: Install the repository RPM
+    yum: name=postgresq state=latest
+
+    
+   
+#  - name: Disable the built-in PostgreSQL module
+#    dnf -qy module disable postgresql
+
+ 
+#  - name: Optionally initialize the database and enable automatic start
+#    /usr/pgsql-12/bin/postgresql-12-setup initdb
+#    systemctl enable postgresql-12
+#    systemctl start postgresql-12
+
+# Due to policies for Red Hat family distributions, 
+# the PostgreSQL installation will not be enabled for automatic start 
+# or have the database initialized automatically. 
+# To make your database installation
+# complete, you need to perform the following steps, based on your distribution: 
+
+#  postgresql-setup initdb
+#  systemctl enable postgresql.service
+#  systemctl start postgresql.service
+

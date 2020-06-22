@@ -1,6 +1,8 @@
 ---
 - name: Uninstall Python 3.6.10
-  hosts: all
+  hosts:
+    - STAGING_SERVERS
+    - PROD_SERVER
   become: yes
 
   #vars:
